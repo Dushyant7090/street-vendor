@@ -1,0 +1,105 @@
+/* Premium Luxury Theme CSS */
+/* Consistent background image across all pages */
+
+:root {
+    --luxury-bg: url('/street_vendor/assets/img/gov_vendor_bg_india.png') no-repeat center center fixed;
+    --glass-bg: rgba(255, 255, 255, 0.18);
+    --glass-border: rgba(255, 255, 255, 0.25);
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    --overlay: rgba(0, 0, 0, 0.18);
+    --accent-gold: #c79a3b;
+    --soft-yellow: #e0b85c;
+    --dark-text: #2f2f2f;    /* Futuristic theme variables */
+    --navy-bg: linear-gradient(135deg, #0f172a, #1e293b, #334155);
+    --dark-glass: rgba(15, 23, 42, 0.55);
+    --electric-blue: #38bdf8;
+    --soft-violet: #818cf8;
+    --premium-cyan: #22d3ee;
+    --bright-white: #ffffff;
+    --soft-grey: #94a3b8;
+    --neon-shadow: 0 0 20px rgba(56, 189, 248, 0.3);}
+
+body {
+    background: var(--luxury-bg);
+    background-size: cover;
+    background-color: var(--overlay);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--dark-text);
+}
+
+/* Glassmorphism class for all UI elements */
+.glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(18px);
+    border-radius: 28px;
+    box-shadow: var(--glass-shadow);
+}
+
+/* Common luxury styles */
+.luxury-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(14px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    box-shadow: var(--glass-shadow);
+    padding: 20px;
+    margin: 10px 0;
+}
+
+.luxury-navbar {
+    background: var(--glass-bg);
+    backdrop-filter: blur(14px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    box-shadow: var(--glass-shadow);
+}
+
+.luxury-button {
+    background: var(--accent-gold);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.luxury-button:hover {
+    background: var(--soft-yellow);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.luxury-table {
+    background: var(--glass-bg);
+    backdrop-filter: blur(14px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    box-shadow: var(--glass-shadow);
+    overflow: hidden;
+}
+
+.luxury-form {
+    background: var(--glass-bg);
+    backdrop-filter: blur(14px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    box-shadow: var(--glass-shadow);
+    padding: 30px;
+}
+
+/* Apply glassmorphism to common classes */
+.card, .panel, .metric-card, .stats, .header, .container, .form, .table, .navbar, .top-nav-bar {
+    background: var(--glass-bg) !important;
+    backdrop-filter: blur(14px) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: 24px !important;
+    box-shadow: var(--glass-shadow) !important;
+}
+
+/* Ensure no other backgrounds override */
+* {
+    box-sizing: border-box;
+}
