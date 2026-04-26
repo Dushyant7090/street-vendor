@@ -109,8 +109,8 @@ $documents = [
         'generated_ts' => $currentLocation && !empty($currentLocation['allocated_date']) ? strtotime((string) $currentLocation['allocated_date']) : null,
         'icon' => 'fa-map-location-dot',
         'available' => (bool) $currentLocation,
-        'download' => $currentLocation ? '/street_vendor/vendor/my_location.php' : '#',
-        'preview' => '/street_vendor/vendor/my_location.php',
+        'download' => $currentLocation ? '/street_vendor/vendor/location.php' : '#',
+        'preview' => '/street_vendor/vendor/location.php',
         'badge' => $currentLocation ? 'Ready' : 'Pending',
         'downloadable' => (bool) $currentLocation,
     ],
@@ -193,7 +193,7 @@ $favoriteItems = array_slice(array_values(array_filter($documents, static functi
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Downloads Hub</title>
     <link rel="stylesheet" href="/street_vendor/assets/css/theme.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/street_vendor/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
@@ -810,11 +810,11 @@ $favoriteItems = array_slice(array_values(array_filter($documents, static functi
                 <i class="fas fa-tachometer-alt"></i>
                 <span>Dashboard</span>
             </div>
-            <div class="sidebar-item" onclick="window.location.href='/street_vendor/vendor/my_location.php'">
+            <div class="sidebar-item" onclick="window.location.href='/street_vendor/vendor/location.php'">
                 <i class="fas fa-map-marker-alt"></i>
                 <span>Locations</span>
             </div>
-            <div class="sidebar-item" onclick="window.location.href='/street_vendor/vendor/license.php'">
+            <div class="sidebar-item" onclick="window.location.href='/street_vendor/vendor/my_licenses.php'">
                 <i class="fas fa-id-card"></i>
                 <span>Licenses</span>
             </div>
@@ -929,8 +929,8 @@ $favoriteItems = array_slice(array_values(array_filter($documents, static functi
                     <article class="widget">
                         <h4><i class="fas fa-bolt"></i> Quick Access</h4>
                         <ul>
-                            <li><a href="/street_vendor/vendor/license.php" style="color:inherit;text-decoration:none;">License Dashboard</a></li>
-                            <li><a href="/street_vendor/vendor/my_location.php" style="color:inherit;text-decoration:none;">Location Module</a></li>
+                            <li><a href="/street_vendor/vendor/my_licenses.php" style="color:inherit;text-decoration:none;">License Dashboard</a></li>
+                            <li><a href="/street_vendor/vendor/location.php" style="color:inherit;text-decoration:none;">Location Module</a></li>
                             <li><a href="/street_vendor/vendor/my_licenses.php" style="color:inherit;text-decoration:none;">My Licenses</a></li>
                         </ul>
                     </article>

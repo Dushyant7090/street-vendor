@@ -1,0 +1,102 @@
+/* Vendor Redesign CSS — mirrors admin-redesign.css variables */
+:root {
+    --primary: 252 79% 65%;
+    --primary-foreground: 210 40% 98%;
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 252 79% 65%;
+    --radius: 0.5rem;
+    --destructive: 0 84.2% 60.2%;
+}
+[data-bs-theme="dark"] {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 252 79% 65%;
+}
+body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: 'Inter', sans-serif;
+}
+.bg-background { background-color: hsl(var(--background)); }
+.text-foreground { color: hsl(var(--foreground)); }
+.bg-card { background-color: hsl(var(--card)); }
+.text-card-foreground { color: hsl(var(--card-foreground)); }
+.bg-muted { background-color: hsl(var(--muted)); }
+.text-muted-foreground { color: hsl(var(--muted-foreground)); }
+.border-border { border-color: hsl(var(--border)) !important; }
+.btn-primary {
+    background-color: hsl(var(--primary));
+    border-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+}
+.btn-primary:hover {
+    background-color: hsl(var(--primary) / 0.9);
+    border-color: hsl(var(--primary) / 0.9);
+}
+.form-control, .form-select {
+    background-color: hsl(var(--background));
+    border-color: hsl(var(--input));
+    color: hsl(var(--foreground));
+}
+.form-control:focus, .form-select:focus {
+    border-color: hsl(var(--ring));
+    box-shadow: 0 0 0 0.25rem hsl(var(--ring) / 0.25);
+}
+/* Layout */
+#vendor-wrapper { display: flex; min-height: 100vh; }
+#vendor-sidebar {
+    width: 250px; min-width: 250px;
+    background-color: hsl(var(--card));
+    border-right: 1px solid hsl(var(--border));
+    display: flex; flex-direction: column;
+    position: sticky; top: 0; height: 100vh;
+}
+#vendor-page-content { flex-grow: 1; display: flex; flex-direction: column; overflow-x: hidden; }
+.vendor-sidebar-link {
+    padding: 0.7rem 1.25rem;
+    color: hsl(var(--muted-foreground));
+    text-decoration: none;
+    font-weight: 500; font-size: .9rem;
+    display: flex; align-items: center; gap: 0.75rem;
+    border-radius: var(--radius);
+    margin: 0.2rem 0.75rem;
+    transition: all 0.2s;
+}
+.vendor-sidebar-link:hover, .vendor-sidebar-link.active {
+    background-color: hsl(var(--muted));
+    color: hsl(var(--foreground));
+}
+.vendor-top-navbar {
+    height: 60px;
+    border-bottom: 1px solid hsl(var(--border));
+    background-color: hsl(var(--background));
+    display: flex; align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+}
+.skeleton-text {
+    display: inline-block; height: 1em; width: 60%;
+    background: linear-gradient(90deg, hsl(var(--muted)) 25%, hsl(var(--border)) 50%, hsl(var(--muted)) 75%);
+    background-size: 200% 100%;
+    animation: sk-loading 1.5s infinite;
+    border-radius: 4px;
+}
+@keyframes sk-loading { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
+/* Status colors */
+.status-pending { color: #eab308; }
+.status-approved { color: #22c55e; }
+.status-rejected { color: #ef4444; }
+.status-expired { color: #94a3b8; }

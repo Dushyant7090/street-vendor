@@ -64,6 +64,10 @@ $userInitial = strtoupper(substr($userName, 0, 1));
             </a>
 
             <div class="menu-label">License</div>
+            <a href="/street_vendor/vendor/available_zones.php" class="<?php echo $currentPage === 'available_zones.php' ? 'active' : ''; ?>">
+                <span class="menu-icon"><i class='bx bx-map-alt'></i></span>
+                Available Zones
+            </a>
             <a href="/street_vendor/vendor/apply_license.php" class="<?php echo $currentPage === 'apply_license.php' ? 'active' : ''; ?>">
                 <span class="menu-icon"><i class='bx bxs-file-plus'></i></span>
                 Apply for License
@@ -74,7 +78,7 @@ $userInitial = strtoupper(substr($userName, 0, 1));
             </a>
 
             <div class="menu-label">Location</div>
-            <a href="/street_vendor/vendor/my_location.php" class="<?php echo $currentPage === 'my_location.php' ? 'active' : ''; ?>">
+            <a href="/street_vendor/vendor/location.php" class="<?php echo $currentPage === 'location.php' ? 'active' : ''; ?>">
                 <span class="menu-icon"><i class='bx bxs-map-pin'></i></span>
                 My Location
             </a>

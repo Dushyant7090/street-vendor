@@ -159,24 +159,49 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         #roleUser:checked ~ .role-pill-bg { transform: translateX(100%); }
 
         /* Floating Label Inputs */
-        .input-group { position: relative; margin-bottom: 1.25rem; }
+        .input-group {
+            position: relative;
+            display: block;
+            margin-bottom: 1.25rem;
+        }
         
         .form-control {
-            width: 100%; height: 56px; padding: 22px 16px 8px 48px; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 14px; font-size: 0.95rem; font-weight: 500; color: var(--text-main); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: inset 0 2px 4px rgba(0,0,0,0.01);
+            width: 100%;
+            height: 64px;
+            padding: 26px 48px 10px 54px;
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 16px;
+            font-size: 0.98rem;
+            line-height: 1.2;
+            font-weight: 600;
+            color: var(--text-main);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.01);
+            box-sizing: border-box;
         }
         .form-control:focus { outline: none; border-color: var(--color-emerald); box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.15), inset 0 2px 4px rgba(0,0,0,0.01); }
         
-        .input-icon { position: absolute; left: 18px; top: 50%; transform: translateY(-50%); font-size: 20px; color: #94a3b8; transition: color 0.3s; pointer-events: none; }
+        .input-icon { position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 21px; color: #94a3b8; transition: color 0.3s; pointer-events: none; z-index: 2; }
         .form-control:focus ~ .input-icon { color: var(--color-emerald); }
 
         .floating-label {
-            position: absolute; left: 48px; top: 18px; color: #94a3b8; font-size: 0.95rem; font-weight: 500; pointer-events: none; transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            position: absolute;
+            left: 54px;
+            top: 21px;
+            color: #94a3b8;
+            font-size: 0.95rem;
+            line-height: 1;
+            font-weight: 600;
+            pointer-events: none;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 2;
         }
         .form-control:focus ~ .floating-label, .form-control:not(:placeholder-shown) ~ .floating-label {
-            top: 8px; font-size: 0.7rem; font-weight: 700; color: var(--color-emerald); letter-spacing: 0.05em; text-transform: uppercase;
+            top: 10px; font-size: 0.68rem; font-weight: 800; color: var(--color-emerald); letter-spacing: 0.04em; text-transform: uppercase;
         }
 
-        .btn-eye { position: absolute; right: 18px; top: 50%; transform: translateY(-50%); font-size: 20px; color: #94a3b8; cursor: pointer; transition: color 0.2s; }
+        .btn-eye { position: absolute; right: 18px; top: 50%; transform: translateY(-50%); font-size: 21px; color: #94a3b8; cursor: pointer; transition: color 0.2s; z-index: 3; }
         .btn-eye:hover { color: var(--color-charcoal); }
 
         /* Options row */
@@ -311,6 +336,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <button type="button" class="btn-sso">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" width="18" alt="G"> Google
                         </button>
+                    </div>
+                    <div style="text-align:center;margin-top:1.25rem;font-size:0.9rem;font-weight:600;color:#64748b;">
+                        New vendor? <a href="/street_vendor/auth/signup.php" style="color:#10b981;text-decoration:none;">Create account</a>
                     </div>
                 </form>
             </div>

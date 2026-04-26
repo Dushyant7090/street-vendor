@@ -9,10 +9,6 @@ require_once __DIR__ . '/../config/database.php';
 session_unset();
 session_destroy();
 
-// Start new session for flash message
-session_start();
-setFlash('success', 'You have been logged out successfully.');
-
 // Redirect to login
-redirect('/street_vendor/auth/login.php');
+redirect('/street_vendor/login.php');
 ?>

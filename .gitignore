@@ -1,0 +1,4 @@
+.agent/
+uploads/photos/
+uploads/vendor_documents/*
+!uploads/vendor_documents/.htaccess
